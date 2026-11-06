@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedrito Futbol</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f2;
+    color: #222;
+}
+
+header {
+    background: #073b25;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 35px;
+}
+
+header p {
+    margin-top: 8px;
+    color: #b9e6c8;
+}
+
+nav {
+    background: #126b3c;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b7f7c8;
+}
+
+.banner {
+    background: linear-gradient(#0008, #0008),
+    url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?w=1400")
+    center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 40px 8%;
+}
+
+section h2 {
+    color: #126b3c;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #0002;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta h3 {
+    color: #126b3c;
+    margin-bottom: 12px;
+}
+
+button {
+    background: #126b3c;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #073b25;
+}
+
+.info {
+    display: none;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+footer {
+    background: #073b25;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 30px;
+}
+
+@media(max-width:600px) {
+    nav a {
+        display: inline-block;
+        margin: 7px;
+    }
+
+    .banner h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>⚽ PEDRITO FUTBOL</h1>
+    <p>Todo sobre el mundo del fútbol</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#reglas">Reglas</a>
+    <a href="#competiciones">Competiciones</a>
+    <a href="#posiciones">Posiciones</a>
+</nav>
+
+<div class="banner" id="inicio">
+    <h2>Bienvenido a Pedrito Futbol</h2>
+    <p>Descubre la pasión, historia y emoción del fútbol.</p>
+</div>
+
+<section id="historia">
+    <h2>📖 Historia del fútbol</h2>
+    <div class="tarjeta">
+        <p>El fútbol moderno nació en Inglaterra durante el siglo XIX.
+        Con el tiempo se convirtió en uno de los deportes más populares
+        del mundo, reuniendo a millones de aficionados.</p>
+    </div>
+</section>
+
+<section id="reglas">
+    <h2>📋 Reglas básicas</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <h3>Jugadores</h3>
+            <p>Cada equipo juega con 11 jugadores en el campo.</p>
+            <button onclick="mostrar('regla1')">Ver más</button>
+            <p class="info" id="regla1">
+            Un equipo tiene un arquero y diez jugadores de campo.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Duración</h3>
+            <p>Un partido dura 90 minutos.</p>
+            <button onclick="mostrar('regla2')">Ver más</button>
+            <p class="info" id="regla2">
+            Se divide en dos tiempos de 45 minutos, con un descanso.
+            </p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Tarjetas</h3>
+            <p>Existen tarjetas amarillas y rojas.</p>
+            <button onclick="mostrar('regla3')">Ver más</button>
+            <p class="info" id="regla3">
+            La amarilla es una advertencia y la roja significa expulsión.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="competiciones">
+    <h2>🏆 Competiciones importantes</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <h3>Copa Mundial</h3>
+            <p>El torneo internacional más importante de selecciones.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Champions League</h3>
+            <p>Competición europea donde participan grandes clubes.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Copa América</h3>
+            <p>Torneo que reúne a las selecciones de Sudamérica.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="posiciones">
+    <h2>⚽ Posiciones del fútbol</h2>
+    <div class="contenedor">
+
+        <div class="tarjeta">
+            <h3>Arquero</h3>
+            <p>Protege la portería y evita los goles.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Defensa</h3>
+            <p>Evita que el equipo contrario ataque y marque.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Mediocampista</h3>
+            <p>Organiza el juego y conecta la defensa con el ataque.</p>
+        </div>
+
+        <div class="tarjeta">
+            <h3>Delantero</h3>
+            <p>Su principal objetivo es marcar goles.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>⚽ Pedrito Futbol</h3>
+    <p>La pasión por el fútbol nunca termina.</p>
+    <p>© 2026 Pedrito Futbol</p>
+</footer>
+
+<script>
+function mostrar(id) {
+    let elemento = document.getElementById(id);
+
+    if (elemento.style.display === "block") {
+        elemento.style.display = "none";
+    } else {
+        elemento.style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>
